@@ -1,7 +1,7 @@
 <h3>
     React based Order Meal onlinePOC
 </h3>
-<p>This app is a very simple react based Order Meal Online POC.</p>
+<p>Very simple react based POC for ordering food online.</p>
 
 
 <h3>
