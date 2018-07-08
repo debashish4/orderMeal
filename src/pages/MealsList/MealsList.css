@@ -1,0 +1,8 @@
+#meals-list{
+    width: 100%;
+    align-self: start;
+}
+
+#meals-list #meal{
+    float: left;
+}

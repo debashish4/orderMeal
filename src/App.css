@@ -1,0 +1,50 @@
+/* HELPER CLASSES */
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to left, #e8cbc0, #636fa4);
+    overflow: hidden;
+}
+
+.clearfix:after, .clearfix:before{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+#app{
+    margin: 0 auto;
+    height: calc(100vh - 20px);
+    width: 1000px;
+} 
+
+#app .sidebar{
+    width: 25%;
+    float: left;
+}
+
+#app .sidebar .resturant{
+  width: 100%;
+}
+
+#app .sidebar .resturant img{
+    width: 100%;
+  }
+
+#app main{
+    height: 100%;
+    border-radius:10px; 
+    background:rgba(255,255,255,0.6);
+    box-shadow: 2px 3px 16px 2px rgba(140,140,140,1);
+}
+
+#app .main-content{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    float: left;
+}

@@ -1,0 +1,35 @@
+#meal{
+    width:300px;
+    margin:10px;
+    padding: 10px;
+    border:1px solid #ccc;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 10px 10px 5px -6px rgba(138,138,138,1);
+
+}
+
+#meal .image-container{
+    overflow: hidden;
+}
+
+#meal .image-container img{
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+#meal .image-container img:hover{
+    transform: scale(1.2);
+}
+
+#meal a{
+    padding: 10px;
+    width: 100px;
+    display: inline-block;
+    border-radius:50px;
+    color: #fff;
+    text-align: center;
+    text-decoration:none;  
+    background: #148f77!important
+}

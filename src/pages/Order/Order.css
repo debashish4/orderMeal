@@ -1,0 +1,43 @@
+#order{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#order .order-placed{
+    width:500px;
+    padding:10px;
+    background: #fff;
+    padding: 10% auto;
+    border-radius: 10px;
+    background: #e0d4d4;
+}
+
+#order .order-placed .msg{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+#order .order-placed img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#order a {
+    color: #fff;
+    background-color: #148f77!important;
+    border-radius: 2px;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+}
+#order .order-Info{
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
