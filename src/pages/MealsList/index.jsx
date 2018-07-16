@@ -1,73 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MealsList.css';
-
+import WithAllMealsData from '../../HOC/WithAllMealsData';
 import Meal from '../../components/Meal';
-import ALL_MEALS from '../../data/mealTypes';
 
-class MealsList extends Component {
-    constructor() {
-        super();
 
-        this.state = {
-            mealList: [],
-            currentId: 0
-        }
-
-    }
-
-    componentDidMount() {
-        console.log('props-mealsList-component mount', this.props);
-        let { match: { params: { id } } } = this.props;
-        this.setState({
-            currentId: id
-        })
-
-        ALL_MEALS.forEach((list, index) => {
-            if (list.id == id) {
-                console.log('here');
-                this.setState({
-                    mealList: [...list.meals]
-                })
-            }
-        })
-    }
-
-    componentWillReceiveProps(newProps) {
-        let { match: { params: { id } } } = newProps;
-        console.log('newProps id', id);
-
-        this.setState({
-            currentId: id
-        })
-
-        ALL_MEALS.forEach((list, index) => {
-            if (list.id == id) {
-                console.log('here');
-                this.setState({
-                    mealList: [...list.meals]
-                })
-            }
-        })
-    }
-
-    renderAllMeals(list) {
-        console.log("list", list);
-        return list.map((item, index) => {
-            return <Meal categoryId={this.state.currentId} mealId={item.id} key={index} name={item.name} imageUrl={item.url} />
-        })
-
-    }
-
-    render() {
-        console.log('i am rendering');
-        return (
-            <div id="meals-list" className="clearfix">
-                <div className="meals-card">
-                    {this.renderAllMeals(this.state.mealList)}
-                </div>
-            </div>
-        )
-    }
+const renderAllMeals = function (list, currentId) {
+    return list.map((item, index) => {
+        return <Meal categoryId={currentId} mealId={item.id} key={index} name={item.name} imageUrl={item.url} />
+    })
 }
 
-export default MealsList;
+const MealsList = function ({ mealList, currentId }) {
+    return (
+        <div id="meals-list" className="clearfix">
+            <div className="meals-card">
+                {renderAllMeals(mealList, currentId)}
+            </div>
+        </div>
+    )
+}
+
+export default WithAllMealsData(MealsList);

@@ -15,8 +15,6 @@ class Order extends React.Component {
     componentDidMount() {
         let { match: { params: { categoryId, mealId } } } = this.props;
 
-        console.log("order componentdidmount props", this.props);
-
         ALL_MEALS.map((item, index) => {
             if (item.id == categoryId) {
                 item.meals.map((mealItem, index) => {
@@ -32,7 +30,6 @@ class Order extends React.Component {
     }
 
     render(props) {
-        console.log("order props", this.props);
         return (
             <div id="order">
                 <div className="order-placed">
